@@ -1,0 +1,27 @@
+<div class="borderLine"></div>
+
+<style>
+    .borderLine {
+        position: absolute;
+        top: 0;
+        inset: 0;
+    }
+    .borderLine::before, .borderLine::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        background: linear-gradient(0deg, transparent, transparent, #ff4545, #ff4545, #ff4545);
+        z-index: 1;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+    .borderLine::before {
+        animation-delay: -1.5s;
+    }
+    .borderLine::after {
+        animation-delay: -4.5s;
+    }
+</style>
